@@ -12,6 +12,10 @@ class Api::V1::AuthenticationController < ApiController
     end
   end
 
+  # def login
+
+  # end
+
   def fetch
     render json: current_user
   end
