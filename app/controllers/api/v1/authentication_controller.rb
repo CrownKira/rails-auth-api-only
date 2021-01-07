@@ -2,6 +2,7 @@ class Api::V1::AuthenticationController < ApiController
   skip_before_action :authenticate_user!, only: [:create]
 
   def create
+    # create a token
     user = User.find_by(email: params[:email])
     puts user
     if user&.valid_password?(params[:password])
