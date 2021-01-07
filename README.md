@@ -1,32 +1,24 @@
-*CREATE USER
-POST: http://localhost:3000/users
-eg. 
-{
-  "email": "test@email.com",
-  "password": "1234567"
-}
-*AUTHORISE USER
-will receive a token
-POST: /api/v1/auth
-eg. 
-{
-  "email": "test@email.com",
-  "password": "1234567"
-}
-token eg. 
-{
-  "token": "..."
-}
+# README
 
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-include the token in the header with key name Authorization (for authentication)
-*GET ALL TEMPERATURES
-GET: /api/v1/temperatures
-*GET MOST RECENT TEMPERATURE
-GET: /api/v1/temperature
-*CREATE NEW TEMPERATURE
-POST: /api/v1/temperature
-eg.
-{
-    "value": 35.5
-}
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
