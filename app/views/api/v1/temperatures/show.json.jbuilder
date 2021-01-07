@@ -1,0 +1,1 @@
+json.partial! "api/v1/temperatures/temperature", todo_item: @todo_item

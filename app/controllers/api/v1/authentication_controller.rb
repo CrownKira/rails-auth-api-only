@@ -1,16 +1,17 @@
-class Api::V1::AuthenticationController< ApiController
-    skip_before_action :authenticate_user!, only: [:create]
-    def create
-        user = User.find_by(email: params[:email])
-        puts user
-        if user&.valid_password?(params[:password])
-            render json: {token: JsonWebToken.encode(sub: user.id)}
-        else 
-            render json: {errors: 'invalid'}
-        end
-    end 
+class Api::V1::AuthenticationController < ApiController
+  skip_before_action :authenticate_user!, only: [:create]
 
-    def fetch
-        render json: current_user
+  def create
+    user = User.find_by(email: params[:email])
+    puts user
+    if user&.valid_password?(params[:password])
+      render json: { token: JsonWebToken.encode(sub: user.id) }
+    else
+      render json: { errors: "invalid" }
     end
-end 
+  end
+
+  def fetch
+    render json: current_user
+  end
+end

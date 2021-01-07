@@ -1,0 +1,1 @@
+json.array! @temperatures, partial: "api/v1/temperatures/temperature", as: :temperature
